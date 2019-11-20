@@ -2,11 +2,16 @@ package be.ac.umons;
 
 import java.math.BigDecimal;
 
-public class Ingredient {
+public class Ingredient implements PizzaComponent {
     private String name;
     private BigDecimal price;
 
     public Ingredient() {
+    }
+
+    public Ingredient(String name, BigDecimal price) {
+        this.name = name;
+        this.price = price;
     }
 
     public String getName() {
@@ -24,4 +29,9 @@ public class Ingredient {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+    public String toString(){
+        return name;
+    }
+
+
 }
